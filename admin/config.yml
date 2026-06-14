@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: marta480/martakaban-site
   branch: main
 
 media_folder: "images"
