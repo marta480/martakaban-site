@@ -38,6 +38,11 @@ collections:
           - { label: "Математика", value: "Математика" }
           - { label: "Мови", value: "Мови" }
         default: "Життя"
+      - label: "Фото"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Завантаж фото для статті (необов'язково)"
       - label: "Текст статті"
         name: "body"
         widget: "markdown"
