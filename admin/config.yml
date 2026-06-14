@@ -1,0 +1,43 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+locale: 'uk'
+
+collections:
+  - name: "blog"
+    label: "Блог"
+    label_singular: "Пост"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - label: "Заголовок"
+        name: "title"
+        widget: "string"
+        hint: "Назва статті"
+      - label: "Дата публікації"
+        name: "date"
+        widget: "datetime"
+        format: "DD.MM.YYYY"
+        date_format: "DD.MM.YYYY"
+        time_format: false
+      - label: "Категорія"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Музика", value: "Музика" }
+          - { label: "Спорт", value: "Спорт" }
+          - { label: "Життя", value: "Життя" }
+          - { label: "Математика", value: "Математика" }
+          - { label: "Мови", value: "Мови" }
+        default: "Життя"
+      - label: "Текст статті"
+        name: "body"
+        widget: "markdown"
+        hint: "Пиши тут свій текст"
